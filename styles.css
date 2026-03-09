@@ -1,0 +1,50 @@
+.local-courseprogress {
+    margin: 1rem 0;
+    padding: 0.85rem 1rem;
+    border: 1px solid #d9e2f2;
+    border-radius: 0.5rem;
+    background: #f8fbff;
+}
+
+.local-courseprogress__title {
+    margin-bottom: 0.6rem;
+    color: #1f2937;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.local-courseprogress__track {
+    width: 100%;
+    height: 0.9rem;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #e5edf7;
+}
+
+.local-courseprogress__fill {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #0f6cbf 0%, #3bb273 100%);
+}
+
+.local-courseprogress__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.55rem;
+}
+
+.local-courseprogress__value {
+    color: #4b5563;
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.local-courseprogress__max {
+    color: #6b7280;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
