@@ -2,7 +2,7 @@
 
 Lite edition of Course Progress for Moodle.
 
-Current release: `1.0.11 Lite` (`2026031622`)
+Current release: `1.0.13 Lite` (`2026031700`)
 
 ## Repository
 
@@ -24,6 +24,7 @@ Current release: `1.0.11 Lite` (`2026031622`)
 - Simple course progress bar for course pages.
 - Progress percentage based on Moodle completion tracking only.
 - Optional numeric percentage display.
+- Optional activity summary with completed and remaining counts.
 - Configurable header text.
 - Global enable or disable setting.
 - Lightweight frontend rendered with a Mustache template.
@@ -32,8 +33,9 @@ Current release: `1.0.11 Lite` (`2026031622`)
 ## Student Experience
 
 - Students see only the progress bar widget.
-- Lite does not include the pending-actions button, pending timeline, or completed-actions counters.
+- Lite does not include the pending-actions button, pending timeline, or completed-actions counters from Pro.
 - Activities without Moodle completion tracking do not affect the percentage.
+- The activity summary can show how many completion-enabled activities are completed and how many remain.
 
 ## Installation
 

@@ -98,6 +98,7 @@ function local_courseprogresslite_get_snapshot(stdClass $course, int $userid): a
     return [
         'completedunits' => $completedunits,
         'totalunits' => $totalunits,
+        'remainingunits' => max(0, $totalunits - $completedunits),
         'percentage' => max(0, min(100, $percentage)),
     ];
 }
@@ -152,16 +153,28 @@ function local_courseprogresslite_bootstrap(stdClass $course): void {
 
     $snapshot = local_courseprogresslite_get_snapshot($course, (int)$USER->id);
     $showpercentage = (int)local_courseprogresslite_get_setting('showpercentage', 1);
+    $showactivitysummary = (int)local_courseprogresslite_get_setting('showactivitysummary', 1);
     $headertext = (string)local_courseprogresslite_get_setting(
         'headertext',
         get_string('progresslabel', 'local_courseprogresslite')
     );
+    $summarydata = (object) [
+        'completed' => $snapshot['completedunits'],
+        'total' => $snapshot['totalunits'],
+    ];
 
     $PAGE->requires->js_call_amd('local_courseprogresslite/progress', 'init', [[
         'label' => $headertext,
         'value' => $snapshot['percentage'],
         'maxlabel' => '100%',
         'showpercentage' => $showpercentage,
+        'showactivitysummary' => $showactivitysummary,
+        'activitysummary' => get_string('activitysummary', 'local_courseprogresslite', $summarydata),
+        'remainingactivities' => get_string(
+            'remainingactivities',
+            'local_courseprogresslite',
+            $snapshot['remainingunits']
+        ),
         'progressbarlabel' => get_string(
             'progressbarlabel',
             'local_courseprogresslite',

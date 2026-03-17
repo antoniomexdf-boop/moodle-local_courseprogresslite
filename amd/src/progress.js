@@ -76,7 +76,10 @@ define(['core/templates'], function(Templates) {
             percentage: value + '%',
             maxlabel: getConfigString(config, 'maxlabel') || '100%',
             progressbarlabel: getConfigString(config, 'progressbarlabel'),
-            showpercentage: getConfigFlag(config, 'showpercentage', true)
+            showpercentage: getConfigFlag(config, 'showpercentage', true),
+            showactivitysummary: getConfigFlag(config, 'showactivitysummary', false),
+            activitysummary: getConfigString(config, 'activitysummary'),
+            remainingactivities: getConfigString(config, 'remainingactivities')
         };
     }
 

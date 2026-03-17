@@ -2,6 +2,20 @@
 
 All notable changes to `local_courseprogresslite` are documented in this file.
 
+## [1.0.13 Lite] - 2026-03-17
+
+### Changed
+
+- Published a fresh Lite release iteration after the latest screenshot, AMD, and documentation updates so the package version advances cleanly beyond the previously used `1.0.12 Lite` tag.
+
+## [1.0.12 Lite] - 2026-03-16
+
+### Changed
+
+- Added an optional activity summary below the Lite progress bar to show completed and remaining completion-enabled activities.
+- Added an admin setting to enable or disable the new activity summary.
+- Refreshed the AMD source, build artifact, and sourcemap to support the new summary fields.
+
 ## [1.0.11 Lite] - 2026-03-16
 
 ### Fixed
@@ -13,16 +27,3 @@ All notable changes to `local_courseprogresslite` are documented in this file.
 ### Fixed
 
 - Updated the GitHub Actions workflow so `moodle-plugin-ci` checks run against the installed plugin path inside `./moodle`, which avoids Mustache basename errors and Grunt backup issues on the repository checkout.
-
-## [1.0.9 Lite] - 2026-03-16
-
-### Fixed
-
-- Removed the unnecessary `MOODLE_INTERNAL` guard from `lib.php` and wrapped the long header-text assignment to satisfy Moodle Code Checker warnings.
-
-## [1.0.8 Lite] - 2026-03-16
-
-### Changed
-
-- Unified Lite file headers, license metadata, author details, and public documentation wording with the standard already used in Course Progress Pro.
-- Normalized the AMD build header style to match the Pro package conventions.

@@ -17,6 +17,7 @@ This distribution package ships with English strings only for Moodle plugin dire
 ## Features
 
 - Simple progress bar and optional percentage
+- Optional activity summary with completed and remaining counts
 - Moodle completion tracking as the only progress source
 - Configurable header text
 - Global plugin enable or disable
@@ -28,6 +29,7 @@ This distribution package ships with English strings only for Moodle plugin dire
 Students see a simple progress bar with no edition label in the course interface.
 The percentage follows Moodle completion-enabled activities only.
 Activities without completion tracking are ignored by the Lite bar.
+When enabled by the administrator, the widget also shows completed and remaining activity counts.
 
 ## Requirements
 
@@ -48,6 +50,7 @@ Available settings:
 
 - Enable plugin
 - Show numeric percentage
+- Show activity summary
 - Header text
 
 ## Screenshots
@@ -61,8 +64,8 @@ No personal data is stored.
 
 ## Release
 
-- Release: `1.0.11 Lite`
-- Version: `2026031622`
+- Release: `1.0.13 Lite`
+- Version: `2026031700`
 
 ## Screenshot Guide
 

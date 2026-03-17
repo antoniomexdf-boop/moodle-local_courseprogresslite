@@ -30,6 +30,9 @@
     * percentage string
     * maxlabel string
     * showpercentage bool
+    * showactivitysummary bool
+    * activitysummary string
+    * remainingactivities string
     * progressbarlabel string
 
     Example context (json):
@@ -39,6 +42,9 @@
         "percentage": "65%",
         "maxlabel": "100%",
         "showpercentage": true,
+        "showactivitysummary": true,
+        "activitysummary": "Completed activities: 4 of 9",
+        "remainingactivities": "Remaining activities: 5",
         "progressbarlabel": "Course progress: 65%"
     }
 }}
@@ -52,3 +58,7 @@
     </div>
     <div class="local-courseprogresslite__max">{{maxlabel}}</div>
 </div>
+{{#showactivitysummary}}
+    <div class="local-courseprogresslite__summary">{{activitysummary}}</div>
+    <div class="local-courseprogresslite__remaining">{{remainingactivities}}</div>
+{{/showactivitysummary}}

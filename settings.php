@@ -48,6 +48,13 @@ if ($hassiteconfig) {
         1
     ));
 
+    $settings->add(new admin_setting_configcheckbox(
+        'local_courseprogresslite/showactivitysummary',
+        get_string('settingsshowactivitysummary', 'local_courseprogresslite'),
+        get_string('settingsshowactivitysummary_desc', 'local_courseprogresslite'),
+        1
+    ));
+
     $settings->add(new admin_setting_configtext(
         'local_courseprogresslite/headertext',
         get_string('settingsheadertext', 'local_courseprogresslite'),

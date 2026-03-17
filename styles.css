@@ -67,3 +67,16 @@
     font-size: 0.9rem;
     font-weight: 600;
 }
+
+.local-courseprogresslite__summary {
+    margin-top: 0.7rem;
+    color: #334155;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.local-courseprogresslite__remaining {
+    margin-top: 0.25rem;
+    color: #475569;
+    font-size: 0.88rem;
+}
