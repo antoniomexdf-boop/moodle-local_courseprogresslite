@@ -2,6 +2,12 @@
 
 All notable changes to `local_courseprogresslite` are documented in this file.
 
+## [1.0.10 Lite] - 2026-03-16
+
+### Fixed
+
+- Updated the GitHub Actions workflow so `moodle-plugin-ci` checks run against the installed plugin path inside `./moodle`, which avoids Mustache basename errors and Grunt backup issues on the repository checkout.
+
 ## [1.0.9 Lite] - 2026-03-16
 
 ### Fixed
