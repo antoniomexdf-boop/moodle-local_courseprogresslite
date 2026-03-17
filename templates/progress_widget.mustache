@@ -31,6 +31,16 @@
     * maxlabel string
     * showpercentage bool
     * progressbarlabel string
+
+    Example context (json):
+    {
+        "label": "Your course progress",
+        "value": 65,
+        "percentage": "65%",
+        "maxlabel": "100%",
+        "showpercentage": true,
+        "progressbarlabel": "Course progress: 65%"
+    }
 }}
 <div class="local-courseprogresslite__title">{{label}}</div>
 <div class="local-courseprogresslite__track" role="progressbar" aria-label="{{progressbarlabel}}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{value}}">
