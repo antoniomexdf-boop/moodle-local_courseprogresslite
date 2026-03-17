@@ -64,13 +64,13 @@ No personal data is stored.
 
 ## Release
 
-- Release: `1.0.14 Lite`
-- Version: `2026031701`
+- Release: `1.0.15 Lite`
+- Version: `2026031702`
 
 ## Screenshot Guide
 
 1. `courseprogresslite_01.png`
-Shows the plugin configuration page with the Lite admin settings.
+Shows the plugin configuration page with the Lite admin settings, including the activity-summary toggle.
 
 2. `courseprogresslite_02.png`
-Shows the student-facing Lite progress widget rendered inside a course page.
+Shows the student-facing Lite progress widget with the percentage, completed activities count, and remaining activities count.

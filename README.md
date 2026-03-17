@@ -2,7 +2,7 @@
 
 Lite edition of Course Progress for Moodle.
 
-Current release: `1.0.14 Lite` (`2026031701`)
+Current release: `1.0.15 Lite` (`2026031702`)
 
 ## Repository
 
@@ -56,10 +56,10 @@ Current release: `1.0.14 Lite` (`2026031701`)
 
 ## Screenshots
 
-1. Plugin configuration page with the Lite settings.
+1. Plugin configuration page showing the Lite settings, including the new activity-summary toggle.
 ![Lite plugin settings](screenshots/courseprogresslite_01.png)
 
-2. Student-facing Lite progress bar inside a course page.
+2. Student-facing Lite progress bar with the percentage plus completed and remaining activity counts.
 ![Lite progress widget](screenshots/courseprogresslite_02.png)
 
 ## License
