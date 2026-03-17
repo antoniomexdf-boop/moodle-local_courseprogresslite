@@ -1,7 +1,20 @@
 # Changelog
 
-<<<<<<< HEAD
 All notable changes to `local_courseprogresslite` are documented in this file.
+
+## [1.0.8 Lite] - 2026-03-16
+
+### Changed
+
+- Unified Lite file headers, license metadata, author details, and public documentation wording with the standard already used in Course Progress Pro.
+- Normalized the AMD build header style to match the Pro package conventions.
+
+## [1.0.7 Lite] - 2026-03-16
+
+### Fixed
+
+- Fixed the GitHub Actions workflow to pass the plugin path to all `moodle-plugin-ci` commands.
+- Removed the unresolved merge-conflict state that had broken `version.php` in the GitHub repository copy.
 
 ## [1.0.6 Lite] - 2026-03-16
 
@@ -17,31 +30,3 @@ All notable changes to `local_courseprogresslite` are documented in this file.
 
 - Simplified Lite configuration to the settings that still apply to the Lite edition.
 - Cleaned the distribution package for Moodle plugin directory submission.
-
-## [1.0.5 Lite] - 2026-03-16
-
-### Changed
-
-- Accepted the latest AMD rebuild, refreshed release metadata, and prepared a clean GitHub/Moodle distribution package for Course Progress Lite.
-
-=======
->>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
-## [1.0.4 Lite] - 2026-03-08
-
-### Fixed
-
-- Restored `Header text` setting in admin configuration.
-- `Enable plugin` now blocks rendering consistently across hooks.
-<<<<<<< HEAD
-=======
-
-### Changed
-
-- Kept default Spanish header as `Tu avance en el curso`.
-- Documentation reorganized with `docs/` structure and repository-style README.
-- Added explicit authorship and contact in docs.
-
-## [1.0.3 Lite] - 2026-03-08
-
-- Removed `headertext` setting and hardened `enabled` checks.
->>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151

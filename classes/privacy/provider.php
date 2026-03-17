@@ -14,7 +14,6 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-<<<<<<< HEAD
 /**
  * Privacy provider for local_courseprogresslite.
  *
@@ -25,21 +24,10 @@
 
 namespace local_courseprogresslite\privacy;
 
-=======
-namespace local_courseprogresslite\privacy;
-
-defined('MOODLE_INTERNAL') || die();
-
->>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
 use core_privacy\local\metadata\null_provider;
 
 /**
  * Privacy API provider for local_courseprogresslite.
-<<<<<<< HEAD
-=======
- *
- * This plugin does not store any personal data.
->>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
  */
 class provider implements null_provider {
     /**

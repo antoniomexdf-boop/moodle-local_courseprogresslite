@@ -1,6 +1,5 @@
 <?php
 // This file is part of Moodle - http://moodle.org/
-<<<<<<< HEAD
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -22,8 +21,6 @@
  * @copyright 2026 Jesus Antonio Jimenez Avina <antoniomexdf@gmail.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-=======
->>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -45,27 +42,6 @@ if ($hassiteconfig) {
     ));
 
     $settings->add(new admin_setting_configcheckbox(
-<<<<<<< HEAD
-=======
-        'local_courseprogresslite/countresources',
-        get_string('settingscountresources', 'local_courseprogresslite'),
-        get_string('settingscountresources_desc', 'local_courseprogresslite'),
-        1
-    ));
-
-    $settings->add(new admin_setting_configselect(
-        'local_courseprogresslite/quizmode',
-        get_string('settingsquizmode', 'local_courseprogresslite'),
-        get_string('settingsquizmode_desc', 'local_courseprogresslite'),
-        'questions',
-        [
-            'questions' => get_string('settingsquizmode_questions', 'local_courseprogresslite'),
-            'activity' => get_string('settingsquizmode_activity', 'local_courseprogresslite'),
-        ]
-    ));
-
-    $settings->add(new admin_setting_configcheckbox(
->>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
         'local_courseprogresslite/showpercentage',
         get_string('settingsshowpercentage', 'local_courseprogresslite'),
         get_string('settingsshowpercentage_desc', 'local_courseprogresslite'),
@@ -79,8 +55,4 @@ if ($hassiteconfig) {
         get_string('progresslabel', 'local_courseprogresslite'),
         PARAM_TEXT
     ));
-<<<<<<< HEAD
-=======
-
->>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
 }
