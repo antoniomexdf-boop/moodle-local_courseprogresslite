@@ -22,8 +22,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Gets a plugin setting with fallback.
  *
@@ -127,7 +125,11 @@ function local_courseprogresslite_should_count_cm(cm_info $cm, completion_info $
  * @param completion_info $completioninfo Course completion helper.
  * @return bool
  */
-function local_courseprogresslite_is_cm_completed(cm_info $cm, int $userid, completion_info $completioninfo): bool {
+function local_courseprogresslite_is_cm_completed(
+    cm_info $cm,
+    int $userid,
+    completion_info $completioninfo
+): bool {
     $data = $completioninfo->get_data($cm, true, $userid);
 
     return !empty($data->completionstate) && (int)$data->completionstate !== COMPLETION_INCOMPLETE;
@@ -150,14 +152,21 @@ function local_courseprogresslite_bootstrap(stdClass $course): void {
 
     $snapshot = local_courseprogresslite_get_snapshot($course, (int)$USER->id);
     $showpercentage = (int)local_courseprogresslite_get_setting('showpercentage', 1);
-    $headertext = (string)local_courseprogresslite_get_setting('headertext', get_string('progresslabel', 'local_courseprogresslite'));
+    $headertext = (string)local_courseprogresslite_get_setting(
+        'headertext',
+        get_string('progresslabel', 'local_courseprogresslite')
+    );
 
     $PAGE->requires->js_call_amd('local_courseprogresslite/progress', 'init', [[
         'label' => $headertext,
         'value' => $snapshot['percentage'],
         'maxlabel' => '100%',
         'showpercentage' => $showpercentage,
-        'progressbarlabel' => get_string('progressbarlabel', 'local_courseprogresslite', $snapshot['percentage']),
+        'progressbarlabel' => get_string(
+            'progressbarlabel',
+            'local_courseprogresslite',
+            $snapshot['percentage']
+        ),
     ]]);
 }
 

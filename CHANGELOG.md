@@ -2,6 +2,12 @@
 
 All notable changes to `local_courseprogresslite` are documented in this file.
 
+## [1.0.9 Lite] - 2026-03-16
+
+### Fixed
+
+- Removed the unnecessary `MOODLE_INTERNAL` guard from `lib.php` and wrapped the long header-text assignment to satisfy Moodle Code Checker warnings.
+
 ## [1.0.8 Lite] - 2026-03-16
 
 ### Changed

@@ -2,7 +2,7 @@
 
 Lite edition of Course Progress for Moodle.
 
-Current release: `1.0.8 Lite` (`2026031619`)
+Current release: `1.0.9 Lite` (`2026031620`)
 
 ## Repository
 
