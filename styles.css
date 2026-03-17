@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* This file is part of Moodle - http://moodle.org/
  *
  * Moodle is free software: you can redistribute it and/or modify
@@ -19,6 +20,9 @@
  */
 
 .local-courseprogresslite {
+=======
+.local-courseprogress {
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
     margin: 1rem 0;
     padding: 0.85rem 1rem;
     border: 1px solid #d9e2f2;
@@ -26,29 +30,49 @@
     background: #f8fbff;
 }
 
+<<<<<<< HEAD
 .local-courseprogresslite__title {
+=======
+.local-courseprogress__title {
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
     margin-bottom: 0.6rem;
     color: #1f2937;
     font-size: 1rem;
     font-weight: 600;
 }
 
+<<<<<<< HEAD
 .local-courseprogresslite__track {
+=======
+.local-courseprogress__track {
+    width: 100%;
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
     height: 0.9rem;
     overflow: hidden;
     border-radius: 999px;
     background: #e5edf7;
 }
 
+<<<<<<< HEAD
 .local-courseprogresslite__fill {
     display: block;
     width: 0;
     height: 100%;
+=======
+.local-courseprogress__fill {
+    display: block;
+    height: 100%;
+    width: 0;
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
     border-radius: inherit;
     background: linear-gradient(90deg, #0f6cbf 0%, #3bb273 100%);
 }
 
+<<<<<<< HEAD
 .local-courseprogresslite__meta {
+=======
+.local-courseprogress__meta {
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,13 +80,21 @@
     margin-top: 0.55rem;
 }
 
+<<<<<<< HEAD
 .local-courseprogresslite__value {
+=======
+.local-courseprogress__value {
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
     color: #4b5563;
     font-size: 0.92rem;
     font-weight: 700;
 }
 
+<<<<<<< HEAD
 .local-courseprogresslite__max {
+=======
+.local-courseprogress__max {
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
     color: #6b7280;
     font-size: 0.9rem;
     font-weight: 600;

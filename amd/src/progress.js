@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -87,24 +88,37 @@ define(['core/templates'], function(Templates) {
      */
     function getOrCreateContainer() {
         var container = document.getElementById('local-courseprogresslite');
+=======
+define([], function() {
+    function getOrCreateContainer() {
+        var container = document.getElementById('local-courseprogress');
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
         if (container) {
             return container;
         }
 
         container = document.createElement('div');
+<<<<<<< HEAD
         container.id = 'local-courseprogresslite';
         container.className = 'local-courseprogresslite';
+=======
+        container.id = 'local-courseprogress';
+        container.className = 'local-courseprogress';
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
         container.setAttribute('aria-live', 'polite');
         document.body.insertBefore(container, document.body.firstChild);
         return container;
     }
 
+<<<<<<< HEAD
     /**
      * Move the widget container into the main course content area.
      *
      * @param {HTMLElement} container The widget root element to relocate.
      * @returns {void}
      */
+=======
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
     function moveToCourseContent(container) {
         var selectors = [
             '#region-main',
@@ -122,6 +136,7 @@ define(['core/templates'], function(Templates) {
         }
     }
 
+<<<<<<< HEAD
     /**
      * Initialize and render the progress widget.
      *
@@ -132,11 +147,18 @@ define(['core/templates'], function(Templates) {
         var container = getOrCreateContainer();
         if (container.dataset.initialized === '1') {
             return undefined;
+=======
+    function init(config) {
+        var container = getOrCreateContainer();
+        if (container.dataset.initialized === '1') {
+            return;
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
         }
 
         container.dataset.initialized = '1';
         moveToCourseContent(container);
 
+<<<<<<< HEAD
         return Templates.renderForPromise('local_courseprogresslite/progress_widget', buildContext(config))
             .then(function(rendered) {
                 return Templates.replaceNodeContents(container, rendered.html, rendered.js);
@@ -148,6 +170,23 @@ define(['core/templates'], function(Templates) {
                 container.dataset.initialized = '';
                 throw error;
             });
+=======
+        var label = config && config.label ? config.label : 'Progress bar';
+        var value = config && Number.isFinite(Number(config.value)) ? Number(config.value) : 0;
+        var maxlabel = config && config.maxlabel ? config.maxlabel : '100%';
+        var showpercentage = !config || Number(config.showpercentage) === 1;
+        value = Math.max(0, Math.min(100, value));
+
+        container.innerHTML =
+            '<div class="local-courseprogress__title">' + label + '</div>' +
+            '<div class="local-courseprogress__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + value + '">' +
+                '<span class="local-courseprogress__fill" style="width: ' + value + '%;"></span>' +
+            '</div>' +
+            '<div class="local-courseprogress__meta">' +
+                '<div class="local-courseprogress__value">' + (showpercentage ? value + '%' : '') + '</div>' +
+                '<div class="local-courseprogress__max">' + maxlabel + '</div>' +
+            '</div>';
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
     }
 
     return {

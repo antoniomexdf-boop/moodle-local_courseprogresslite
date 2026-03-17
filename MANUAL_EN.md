@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Course Progress Lite - User and Admin Manual (English)
 
 ## Overview
@@ -38,6 +39,19 @@ Activities without completion tracking are ignored by the Lite bar.
 1. Copy plugin into `moodle/local/courseprogresslite`.
 2. Complete installation as admin.
 3. Purge caches.
+=======
+# Manual - Course Progress Lite
+
+## Overview
+
+`local_courseprogresslite` displays learner progress with a simple top progress bar in course pages.
+
+## Authorship
+
+- Author: Jesus Antonio Jimenez Avina
+- Contact: antoniomexdf@gmail.com
+- Contact (secondary): antoniojamx@gmail.com
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
 
 ## Configuration
 
@@ -47,6 +61,7 @@ Path:
 Available settings:
 
 - Enable plugin
+<<<<<<< HEAD
 - Show numeric percentage
 - Header text
 
@@ -71,3 +86,25 @@ Shows the plugin configuration page with the Lite admin settings.
 
 2. `courseprogresslite_02.png`
 Shows the student-facing Lite progress widget rendered inside a course page.
+=======
+- Count resources
+- Quiz calculation mode
+- Show percentage
+
+## Expected behavior
+
+- If `Enable plugin` is set to No, the bar is not shown.
+- If `Enable plugin` is set to Yes, the bar is shown.
+- Default student-facing header is `Your course progress`.
+
+## Installation
+
+1. Copy `courseprogresslite` into `moodle/local/courseprogresslite`.
+2. Complete upgrade from notifications.
+3. Purge caches.
+
+## Release
+
+- Release: `1.0.4 Lite`
+- Version: `2026030805`
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151

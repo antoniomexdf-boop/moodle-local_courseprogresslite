@@ -1,5 +1,6 @@
 # Changelog
 
+<<<<<<< HEAD
 All notable changes to `local_courseprogresslite` are documented in this file.
 
 ## [1.0.6 Lite] - 2026-03-16
@@ -23,9 +24,24 @@ All notable changes to `local_courseprogresslite` are documented in this file.
 
 - Accepted the latest AMD rebuild, refreshed release metadata, and prepared a clean GitHub/Moodle distribution package for Course Progress Lite.
 
+=======
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
 ## [1.0.4 Lite] - 2026-03-08
 
 ### Fixed
 
 - Restored `Header text` setting in admin configuration.
 - `Enable plugin` now blocks rendering consistently across hooks.
+<<<<<<< HEAD
+=======
+
+### Changed
+
+- Kept default Spanish header as `Tu avance en el curso`.
+- Documentation reorganized with `docs/` structure and repository-style README.
+- Added explicit authorship and contact in docs.
+
+## [1.0.3 Lite] - 2026-03-08
+
+- Removed `headertext` setting and hardened `enabled` checks.
+>>>>>>> 11d3c600c46a4ce34975e255d5b2bb8faceb3151
