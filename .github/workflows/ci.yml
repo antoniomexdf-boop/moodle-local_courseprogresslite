@@ -20,9 +20,9 @@ jobs:
         image: mariadb:10
         env:
           MYSQL_USER: 'root'
-          MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
-          MYSQL_CHARACTER_SET_SERVER: 'utf8mb4'
-          MYSQL_COLLATION_SERVER: 'utf8mb4_unicode_ci'
+          MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+          MYSQL_CHARACTER_SET_SERVER: "utf8mb4"
+          MYSQL_COLLATION_SERVER: "utf8mb4_unicode_ci"
         ports:
           - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval 10s --health-timeout 5s --health-retries 3
@@ -46,6 +46,8 @@ jobs:
           php-version: ${{ matrix.php }}
           extensions: ${{ matrix.extensions }}
           ini-values: max_input_vars=5000
+          # If you are not using code coverage, keep "none". Otherwise, use "pcov" (Moodle 3.10 and up) or "xdebug".
+          # If you try to use code coverage with "none", it will fallback to phpdbg (which has known problems).
           coverage: none
 
       - name: Initialise moodle-plugin-ci
@@ -61,48 +63,50 @@ jobs:
         env:
           DB: ${{ matrix.database }}
           MOODLE_BRANCH: ${{ matrix.moodle-branch }}
+          # Uncomment this to run Behat tests using the Moodle App.
+          # MOODLE_APP: 'true'
 
       - name: PHP Lint
         if: ${{ !cancelled() }}
-        run: moodle-plugin-ci phplint ./moodle/local/courseprogresslite
+        run: moodle-plugin-ci phplint
 
       - name: PHP Mess Detector
-        continue-on-error: true
+        continue-on-error: true # This step will show errors but will not fail
         if: ${{ !cancelled() }}
-        run: moodle-plugin-ci phpmd ./moodle/local/courseprogresslite
+        run: moodle-plugin-ci phpmd
 
       - name: Moodle Code Checker
         if: ${{ !cancelled() }}
-        run: moodle-plugin-ci phpcs --max-warnings 0 ./moodle/local/courseprogresslite
+        run: moodle-plugin-ci phpcs --max-warnings 0
 
       - name: Moodle PHPDoc Checker
         if: ${{ !cancelled() }}
-        run: moodle-plugin-ci phpdoc -m ./moodle --max-warnings 0 ./moodle/local/courseprogresslite
+        run: moodle-plugin-ci phpdoc --max-warnings 0
 
       - name: Validating
         if: ${{ !cancelled() }}
-        run: moodle-plugin-ci validate -m ./moodle ./moodle/local/courseprogresslite
+        run: moodle-plugin-ci validate
 
       - name: Check upgrade savepoints
         if: ${{ !cancelled() }}
-        run: moodle-plugin-ci savepoints ./moodle/local/courseprogresslite
+        run: moodle-plugin-ci savepoints
 
       - name: Mustache Lint
         if: ${{ !cancelled() }}
-        run: moodle-plugin-ci mustache -m ./moodle ./moodle/local/courseprogresslite
+        run: moodle-plugin-ci mustache
 
       - name: Grunt
         if: ${{ !cancelled() }}
-        run: moodle-plugin-ci grunt -m ./moodle --max-lint-warnings 0 ./moodle/local/courseprogresslite
+        run: moodle-plugin-ci grunt --max-lint-warnings 0
 
       - name: PHPUnit tests
         if: ${{ !cancelled() }}
-        run: moodle-plugin-ci phpunit -m ./moodle --fail-on-warning ./moodle/local/courseprogresslite
+        run: moodle-plugin-ci phpunit --fail-on-warning
 
       - name: Behat features
         id: behat
         if: ${{ !cancelled() }}
-        run: moodle-plugin-ci behat -m ./moodle --profile chrome --scss-deprecations ./moodle/local/courseprogresslite
+        run: moodle-plugin-ci behat --profile chrome --scss-deprecations
 
       - name: Upload Behat Faildump
         if: ${{ failure() && steps.behat.outcome == 'failure' }}
@@ -113,6 +117,6 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
-      - name: Mark cancelled jobs as failed
+      - name: Mark cancelled jobs as failed.
         if: ${{ cancelled() }}
         run: exit 1
