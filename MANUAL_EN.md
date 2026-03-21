@@ -4,6 +4,7 @@
 
 `local_courseprogresslite` provides a compact course progress bar for Moodle course pages.
 This distribution package ships with English strings only for Moodle plugin directory compliance.
+The GitHub repository copy and the Moodle ZIP are produced from the same validated source tree.
 
 ## Repository
 
@@ -64,8 +65,8 @@ No personal data is stored.
 
 ## Release
 
-- Release: `1.0.16 Lite`
-- Version: `2026031703`
+- Release: `1.0.17 Lite`
+- Version: `2026032100`
 
 ## Screenshot Guide
 

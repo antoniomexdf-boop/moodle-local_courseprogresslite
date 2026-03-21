@@ -2,7 +2,7 @@
 
 Lite edition of Course Progress for Moodle.
 
-Current release: `1.0.16 Lite` (`2026031703`)
+Current release: `1.0.17 Lite` (`2026032100`)
 
 ## Repository
 
@@ -53,6 +53,7 @@ Current release: `1.0.16 Lite` (`2026031703`)
 
 - The plugin package ships with English strings only, following Moodle plugin directory guidance.
 - Additional translations should be contributed through Moodle translation infrastructure after approval.
+- This repository copy is prepared for GitHub, while release ZIPs are packaged separately for Moodle installation tests.
 
 ## Screenshots
 

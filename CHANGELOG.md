@@ -2,6 +2,12 @@
 
 All notable changes to `local_courseprogresslite` are documented in this file.
 
+## [1.0.17 Lite] - 2026-03-21
+
+### Changed
+
+- Prepared a new repository-ready Lite package using the release playbook, keeping the plugin English-only and aligning metadata with the validated distribution workflow.
+
 ## [1.0.16 Lite] - 2026-03-17
 
 ### Changed
