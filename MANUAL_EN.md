@@ -65,8 +65,8 @@ No personal data is stored.
 
 ## Release
 
-- Release: `1.0.17 Lite`
-- Version: `2026032100`
+- Release: `1.0.18 Lite`
+- Version: `2026032101`
 
 ## Screenshot Guide
 

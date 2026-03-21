@@ -2,6 +2,12 @@
 
 All notable changes to `local_courseprogresslite` are documented in this file.
 
+## [1.0.18 Lite] - 2026-03-21
+
+### Fixed
+
+- Rebuilt the AMD artifacts with Moodle's Grunt pipeline so `amd/build/progress.min.js` and `amd/build/progress.min.js.map` match the official CI output.
+
 ## [1.0.17 Lite] - 2026-03-21
 
 ### Changed
